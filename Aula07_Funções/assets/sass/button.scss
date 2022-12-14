@@ -1,0 +1,26 @@
+@mixin button-style($background, $color){
+    background: $background;
+    color: $color;
+    &:hover{
+      background-color: mix($background, blue); //estas funções estão disponiveis na documentação;
+    }
+}
+
+.btn{
+    width: 200px;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    border-radius: 10px;
+
+    &.btn-laranja{
+       @include button-style($color-orange, white);
+    }
+    &.btn-roxo{
+       @include button-style($color-roxo, white);
+    }
+    &.btn-amarelo{
+       @include button-style($color-amarelo, black);
+    }
+
+}

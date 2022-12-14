@@ -1,0 +1,26 @@
+.btn{
+    width: 200px;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    border-radius: 10px;
+
+}
+
+@mixin button-style($background, $color){
+    background: $background;
+    color: $color;
+}
+
+.btn-laranja{
+    @extend .btn;
+    @include button-style($color-orange, white);
+}
+.btn-roxo{
+    @extend .btn;
+    @include button-style($color-roxo, white);
+}
+.btn-amarelo{
+    @extend .btn;
+    @include button-style($color-amarelo, black);
+}
